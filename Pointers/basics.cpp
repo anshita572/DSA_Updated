@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int num = 5;
+    int num = 6;
     cout << "Value is : " << num << endl;
     cout << "Address is : " << &num << endl;
 
