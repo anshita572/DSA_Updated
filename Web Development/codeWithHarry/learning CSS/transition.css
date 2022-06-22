@@ -1,0 +1,29 @@
+.container{
+    background-color: red;
+    height: 600px;
+    width: 1200px;
+}
+.box{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+   /* transform: translate(50px,25px) rotate(45deg);*//* 0.5turn can also be used Degree and turn both can be used*/
+    /*34px aage ko move kr jayega i.e. in x-axis and 25 px neeche ki taraf  ie. in y axis */
+    /*transform-origin:0;/*by default transformation is from center*/
+    /* transform:scaleX(6); */
+    /* transform:scaleY(6); */
+    /*transform: skew(3deg,16deg); /*skew in x and y*/
+    
+}
+img:hover{
+    background-color: aqua;
+    width: 500px;
+    height: 300px;
+}
+img{
+    transition-property: width ;
+    transition-property: height;
+    transition-duration: 2s;
+    transition-timing-function:ease-in;
+    /* transition-delay: 2s; */
+}

@@ -1,0 +1,4 @@
+Display headings are not responsive by default, but it’s possible to enable responsive font sizes.
+Containers are required when using our default grid system.
+Every row in bootstrap has 12 units of space
+

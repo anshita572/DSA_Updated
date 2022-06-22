@@ -1,0 +1,32 @@
+body{
+    background-color: #FFEEEE;
+    /* background-image: url(anshita.png); */
+    background-repeat: no-repeat;
+}
+h1{
+    color: #F25287;
+  /*  font-size: 100px;*/
+}
+h3{
+    color: #1C7947;
+    
+}
+li{
+    list-style:lower-roman;
+}
+    
+/*img{
+    background-color: red;
+}*/
+
+hr{
+    background-color: white;
+    height: 0px;
+    width:40%;/*width,height,background color of hr*/
+   border-style: none;
+   border-top-style: dotted; /*color,style,width of border*/
+   border-width: 5px;
+   border-color: grey;
+    
+    
+}

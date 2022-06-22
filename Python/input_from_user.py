@@ -1,0 +1,5 @@
+input("Enter your name\n")
+a=input("Enter your city\n")
+print("Welcome to "+ a)
+b=input("Enter a number\n")
+print(b)

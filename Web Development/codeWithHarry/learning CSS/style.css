@@ -1,0 +1,79 @@
+body{
+    /* background-image: url(c++.png); */
+    /* background-repeat: repeat-y; */
+}
+nav{
+    background-color: black;
+    color: white;
+    position: sticky;
+    
+}
+ul{
+    display: inline;
+    font-size: 2vw; /*responsivness*/
+}
+.container
+{  width: 200px;
+    height: 300px;
+    background-color: red;
+    /* properties of background-image are written below */
+   background-image: url(c++.png);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: top;
+    /* background-attachment: fixed; */
+     /* position: realtive;  */
+     /* z-index: 3; */
+}
+.parent-box{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    text-transform:initial;
+}
+.child-box{
+    height: 150px;
+    width: 260px;
+    background-color: palevioletred;
+    border-style: solid;
+    border-width: 30px;
+    border-color: chartreuse;
+  /* box-sizing: content-box; */
+  box-sizing: border-box; 
+  
+  
+}
+.black-box
+{   height: 200px;
+    width: 200px;
+    background-color: black;
+}
+.red-box
+{   height: 200px;
+    width: 200px;
+    background-color: red;
+    display: inline-block;
+}
+.green-box
+{   height: 200px;
+    width: 200px;
+    background-color:green;
+    display: inline-block;
+}
+.myContainer{
+    background-color: aqua;
+    height: 80vh;
+    width: 50vw;
+}
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    position: relative;
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color:gold;
+   
+}

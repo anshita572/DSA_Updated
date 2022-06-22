@@ -1,0 +1,44 @@
+/* Tag selectors */
+body{
+    background-color: #FFEEEE;
+}
+h1{
+    color: #F25287;
+   font-size: 60px;
+}
+li{
+    font-size: 70px;
+}
+img:hover{     /*pseudo class : hover */
+    width: 120px;
+     height:80px;
+     background-color: blue;
+}
+/* Class selectors */
+.rice
+{
+    background-color: #CC704B;
+    width: 120px;
+     height:80px;
+}
+.watermelon{
+    background-color: #125B50;
+    width: 120px;
+     height:80px;
+}
+.circular
+{
+    border-radius: 100%;
+    
+}
+.ice_cream
+{
+    background-color:#FD5D5D;
+    width: 120px;
+     height:80px;
+}
+/* id selectors*/
+#heading
+{
+    color:red;
+}

@@ -1,0 +1,183 @@
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header{ 
+    padding: 50px auto 50px auto; 
+ } */
+nav ul {
+    height: 58px;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin: 30px;
+    /* padding: 50px auto; */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+nav {
+    width: 1685px;
+    /* height: 70px; */
+    display: flex;
+    /* padding: 50px auto 50px auto; */
+    justify-content: left;
+    background-color: #1d6ded;
+    color: white;
+    /* position: static;
+    top: 0px; */
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*position,top and width for making nav bar sticky*/
+
+    /* padding: 20px auto 20px 10px; invalid property here*/
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    padding: 26px 0 22px 8px;
+
+}
+
+.search-bar {
+    padding-top: 6px;
+    display: flex;
+    align-items: center;
+
+}
+
+.search-bar input {
+    border-radius: 5px;
+    margin: auto 10px;
+    width: 42vw;
+    height: 29px;
+    padding: 0 12px;
+}
+
+.search-btn {
+    display: flex;
+    margin: 21px 0;
+    width: 107px;
+    height: 29px;
+    padding: 5px 2px 0 33px;
+    background-color: #1d6ded;
+    color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+
+.search-btn:hover {
+    background-color: white;
+    color: #1d6ded;
+}
+
+.container {
+    min-height: calc(100vh - 58px - 7vh);
+    /*100vh-nav ul height-copyright height*/
+}
+
+.main-img {
+
+    margin: 100px 0px 100px 135px;
+    display: flex;
+    align-items: center;
+}
+
+.main-img:hover {
+    cursor: pointer;
+}
+
+h1 {
+    padding: 26px 14px;
+    font-family: 'Proza Libre', sans-serif;
+    font-weight: lighter;
+}
+
+.card {
+    /* background-color: purple; */
+    max-width: 171vw;
+    display: inline-flex;
+    margin-top: 29px;
+    margin-left: 14px;
+    margin-right: 69px;
+    margin-bottom: 21px;
+    /* margin: 37px auto auto 40px; */
+
+
+}
+
+.card-item:hover {
+    /* display: inline-flex; */
+    /*if display is inline flex,then p will be
+    displayed alongside */
+    /* justify-content: center; since display flex is not applied these 3 
+    properties will have no effect
+    align-items: center;
+    flex-direction: row; */
+    /* margin: 0 15px; */
+    cursor: pointer;
+}
+
+.item-desc {
+    /* display: flex; if item-desc display is flex,then all lines of 3 para's
+    will be displayed in a single line*/
+    text-align: center;
+    margin: 26px 0;
+    /* flex-direction: column; */
+}
+.grab-now
+{
+    text-decoration: none;
+    color: green;
+    /* font-family:'Lato', sans-serif; */
+    font-weight: bolder;
+
+}
+
+
+
+.copyright {
+    height: 7vh;
+    background-color: #1d6ded;
+    color: white;
+    text-align: center;
+    padding-top: 42px;
+}
+
+.show-more {
+    width: 59px;
+    height: 55px;
+    padding-bottom: 58px;
+    filter: drop-shadow(0 0 0 grey);
+    filter: opacity(0.4);
+    /*by using filter drop shadow and opacity we have changed the color of
+    show more image from black to grey*/
+}
+.show-more:hover
+{
+    
+    filter: opacity(1);
+}
