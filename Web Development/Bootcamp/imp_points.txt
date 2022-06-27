@@ -1,0 +1,3 @@
+inline css :written in html body itself
+internal css: in head tag of html using style tag
+external : a separate css file 
