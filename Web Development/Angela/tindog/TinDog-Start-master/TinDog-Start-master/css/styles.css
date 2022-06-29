@@ -49,8 +49,9 @@ p{
 }
 .nav-item
 {padding:0 18px;
-position: relative;
-left: 107%;}
+/* position: relative;
+left: 147%; */
+}
 .nav-link
 {font-size: 1.2rem;}
 /* Download Button */
@@ -163,7 +164,7 @@ left: 53px;
 }
 
 
- @media(max-width:974px) /*apply this media query when width is 974px or less than that */
+ @media(max-width:1028px) /*apply this media query when width is 974px or less than that */
 { #title
     {
         text-align: center;
