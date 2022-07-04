@@ -63,3 +63,7 @@ z = z.toUpperCase(); //converting first letter to uppercase
 var y = x.slice(1, x.length); //separting rest of letters
 y = y.toLowerCase(); //converting rest of letters to lower case
 alert("Hello " + z + y);
+
+var dogAge=prompt("Enter the age of your dog");
+var humanAge=(dogAge-2)*4 +21;
+alert(humanAge);
