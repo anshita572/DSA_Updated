@@ -178,7 +178,7 @@ changes to blue (look at original hotstar website to understand)*/ {
 }
 .movies-list {
   width: 100%;
-  height: 22px;
+  height: 220px;
   position: relative;
   margin: 10px 0 20px;
 }
@@ -273,8 +273,8 @@ changes to blue (look at original hotstar website to understand)*/ {
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
 }
-.previous-btn,
-.next-button {
+.pre-btn,
+.nxt-btn {
   position: absolute;
   top: 0;
   width: 5%;
@@ -284,21 +284,25 @@ changes to blue (look at original hotstar website to understand)*/ {
   cursor: pointer;
   outline: none;
 }
-.previous-btn {
+
+.pre-btn {
   left: 0;
   background: linear-gradient(to right, #0c111b 0%, #0c111b00);
 }
-.next-btn {
+
+.nxt-btn {
   right: 0;
   background: linear-gradient(to left, #0c111b 0%, #0c111b00);
 }
-.previous-btn img,
-.next-btn img {
+
+.pre-btn img,
+.nxt-btn img {
   width: 15px;
   height: 20px;
   opacity: 0;
 }
-.previous-btn:hover,
-.next-btn:hover {
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
   opacity: 1;
 }
