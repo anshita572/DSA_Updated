@@ -1,0 +1,25 @@
+body
+{
+    text-align: center;
+    background-color: #393E46;
+}
+.dice
+{
+ display:inline-block;
+ text-align: center;
+ margin: 40px; 
+ font-family: 'Indie flower';  
+ color:#fff;
+ font-size: 3rem;
+}
+.container
+{
+   font-family: 'Lobster';
+    color: #4ECCA3;
+    font-size: 6rem;
+}
+footer
+{
+    font-family: 'Indie flower';
+    color: #fff;
+}
