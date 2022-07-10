@@ -1,19 +1,32 @@
 body {
     text-align: center;
-    background-color: #283149;
+    background-color: #2D4263;
   }
   
   h1 {
     font-size: 5rem;
     color: #DBEDF3;
-    font-family: "Arvo", cursive;
+    font-family: 'Arvo';
     text-shadow: 3px 0 #DA0463;
   
   }
-  
+  .drum-img
+  {
+    height: 110px;
+    width: 110px;
+    position: relative;
+    top: 8px;
+  }
+  .footer-img
+  {
+    height: 22px;
+    width: 26px;
+    position: relative;
+    top: 4px;
+  }
   footer {
     color: #DBEDF3;
-    font-family: sans-serif;
+    font-family: 'Playfair display';
   }
   
   .w {
@@ -64,9 +77,9 @@ body {
   
   .drum {
     outline: none;
-    border: 10px solid #404B69;
+    border: 10px solid #5584AC;
     font-size: 5rem;
-    font-family: 'Arvo', cursive;
+    font-family: 'Arvo';
     line-height: 2;
     font-weight: 900;
     color: #DA0463;

@@ -15,6 +15,7 @@ for (var i = 0; i < n; i++) {
       //this tells which button got clicked w or a or so on
       // this.style.color="white";
       {makeSound(this.innerHTML);
+        buttonAnimation(this.innerHTML);
       
     });
 }
@@ -23,6 +24,7 @@ document.addEventListener("keydown",function(event)
     // alert("Key pressed");
     //console.log(event);
     makeSound(event.key);
+    buttonAnimation(event.key);
 });
 function makeSound(key)
 {
@@ -59,4 +61,14 @@ function makeSound(key)
         default:console.log(this.innerHTML);
           break;
 }
+}
+function buttonAnimation(currentKey)
+{
+ var activeButton=document.querySelector("."+currentKey);
+                  //like(.w) where w is class of w button
+    activeButton.classList.add("pressed");
+    //setTimeout(function, milliseconds, param1, param2, ...)
+    setTimeout(function()
+    {activeButton.classList.remove("pressed");}
+    ,300); //0.3 seconds or 300 milliseconds
 }
