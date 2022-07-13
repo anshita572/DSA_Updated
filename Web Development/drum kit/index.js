@@ -72,3 +72,9 @@ function buttonAnimation(currentKey)
     {activeButton.classList.remove("pressed");}
     ,300); //0.3 seconds or 300 milliseconds
 }
+// $(document).keydown(function(e)
+// {
+//     if(e.keyCode===71)
+//     {var greenSound = new Audio("./sounds/crash.mp3");
+//     greenSound.play();}
+// });
