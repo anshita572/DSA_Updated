@@ -29,7 +29,7 @@ int i=0;     //i : index for subArray1
 int j=0;    //j : index for subArray2
 k=start;    //k : index for arr i.e. which is our main array
 while(i<n1 && j<n2)
-{if(subArray1[i]<subArray2[j])
+{if(subArray1[i]<=subArray2[j])
 {
     arr[k++]=subArray1[i++];
 }
