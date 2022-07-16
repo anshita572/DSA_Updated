@@ -2,6 +2,9 @@
 
 //Method-2 : Optimised
 //Time Complexity : O(n+m)
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {
 	int i=0;
@@ -29,6 +32,7 @@ vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, i
 
 //Method 1 : Brute-force 
 //Time Complexity : O(n^2)
+//arr2 ki ek j value k corresponding u r checking entire arr1
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {vector<int>ans;
 	for(int i=0;i<n;i++)
