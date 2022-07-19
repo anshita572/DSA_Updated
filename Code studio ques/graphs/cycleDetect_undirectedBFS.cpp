@@ -24,7 +24,8 @@ bool isCyclicBFS(unordered_map<int,bool>&visited,unordered_map<int,list<int>>&ad
         q.pop();
         for(auto i :adj[frontNode])
         {
-            if(visited[i]==true && i!=parent[frontNode] )//i is not parent of frontNode
+            if(visited[i]==true && 
+            i!=parent[frontNode] )//i is not parent of frontNode
             {return true;}
             else if(visited[i]==false)
             {

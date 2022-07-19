@@ -22,5 +22,7 @@ public:
                {product=1;}
         }
         return maxi;
+         //Why traversing from both sides ?Look at this testcase
+        //[2,-5,-2,-4,3]
     }
 };

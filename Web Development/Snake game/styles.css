@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.board
+#board
 {
     height: 90vmin;
     width: 90vmin;
@@ -20,7 +20,7 @@ body{
     grid-template-columns: repeat(18,1fr);
 }
 .snake-head
-{background-color: green;
+{background-color:green;
 border: .25vmin solid black;}
 .snake-food
 {background-color: red;}
