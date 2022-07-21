@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
 } */
+.heading
+{position: absolute;
+left: 10px;
+top:10px;}
+.score-class
+{
+    position:absolute;
+    right: 200px;
+    top: 20px;
+}
 body{
     background: url(./img/bg.jpg);
     background-size: 100vw 100vh;
@@ -14,7 +24,7 @@ body{
     height: 90vmin;
     width: 90vmin;
     background: linear-gradient( #0CCDA3, #C1FCD3 );
-    border: 5px solid #16003B;
+    border: 2px solid #16003B;
     display: grid;
     grid-template-rows: repeat(18,1fr);/*18 rows of width 1 fr(Fr is a fractional unit and 1fr is for 1 part of the available space)*/
     grid-template-columns: repeat(18,1fr);
