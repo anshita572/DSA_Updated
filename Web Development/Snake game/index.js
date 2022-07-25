@@ -141,7 +141,7 @@ function gameOperations() {
       }
       // console.log(snakeSpeed);
     }
-    var randomFoodPosition = Math.floor(Math.random() * 18) + 1;
+    var randomFoodPosition = Math.floor(Math.random() * 16) + 1;
     food = { x: randomFoodPosition, y: randomFoodPosition };
   }
 }
