@@ -1,6 +1,9 @@
 //Sort 0 1 2 [https://bit.ly/3DfQW0s]
 //Approach : Using 3 pointers  OR Dutch National Flag Algorithm Approach
 //Time Complexity : O(n)
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 void sort012(int *arr, int n)
 {
    int low=0;
