@@ -55,6 +55,7 @@ public:
             }
             
         }
+        //if target not found
         if(ans==INT_MAX)
         {ans=0;}
         return ans;
