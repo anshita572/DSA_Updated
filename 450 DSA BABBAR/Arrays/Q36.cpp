@@ -10,7 +10,6 @@ public:
         int m=array2.size();
         double i=0;
         double j=0;
-        double count=0;
         double m1=-1;
         double m2=-1;
         for(int count=0;count<=(m+n)/2;count++)
@@ -35,9 +34,9 @@ public:
                 j++;
             }
         }
-        if((m+n)%2 ==1)
+        if((m+n)%2 ==1) //odd
         {return m1;}
-        else
+        else //even
         {return (m1+m2)/2;}
         
     
