@@ -3,6 +3,7 @@ using namespace std;
 void rowSum(int arr[][3],int row,int col)
 {for(int row=0;row<3;row++)
 { int sum=0;
+int ans=INT_MIN;
     for(int col=0; col<3;col++)
 {
     sum=sum+arr[row][col];

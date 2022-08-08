@@ -1,5 +1,8 @@
 //https://leetcode.com/problems/search-a-2d-matrix/
 //Time complexity : O(log(mn)) ,where m->no. of rows,n->no. of columns
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
@@ -23,3 +26,6 @@ public:
         return false;
     }
 };
+// 4 4
+// 10 20 30 40 15 25 35 45 27 29 37 48 32 33 39 50
+// 37

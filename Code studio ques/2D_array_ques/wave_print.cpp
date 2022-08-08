@@ -1,5 +1,8 @@
 //https://bit.ly/329Le3K
 //Time Complexity: O(m*n)
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 vector<int> wavePrint(vector<vector<int>> arr, int nRows, int mCols)
 {vector<int>ans;
     for(int col=0;col<mCols;col++)
