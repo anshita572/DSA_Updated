@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/
-//TC :O(log n)
+//TC :O(log(min(n1,n2))
 //SC :O(1)
 #include<iostream>
 #include <bits/stdc++.h>
