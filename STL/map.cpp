@@ -15,6 +15,14 @@ for(auto it:mp)
 //or
 for(auto it=mp.begin();it!=mp.end();it++)
 {cout<<it->first<<" "<<it->second<<endl;}
-
+priority_queue<int>pq;
+pq.push(3);
+pq.push(1);
+pq.push(6);
+pq.push(3);
+while(!pq.empty())
+{cout<<pq.top()<<" ";
+pq.pop();
+}
 return 0;
 }
