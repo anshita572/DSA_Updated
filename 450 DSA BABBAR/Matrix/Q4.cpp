@@ -38,28 +38,29 @@ public:
     int rowWithMax1s(vector<vector<int>> arr, int n, int m)
     {
         int maxi = 0;
-        int ans = 0;
+        int ans = -1;
         int i = 0;
         int j = 0;
         int count = 0;
         while (i < n && j < m)
         {
-            if (arr[i][j] == 1 && j < m)
+            if (arr[i][j] == 1)
             {
                 count = m - j;
+                if (count > maxi)
+                {
+                    maxi = count;
+                    ans = i;
+                }
+                // Move to the next row after storing the count and index of a particular row
+                i++;
+                j = -1;
+                count = 0;
             }
-            j++;
 
-            if (count > maxi)
-            {
-                maxi = count;
-                ans = i;
-            }
-            if (maxi == 0)
-            {
-                ans = -1;
-            }
-            if (j >= m && i < n)
+            j++;
+            // in case no 1's are found in a row ,move to the next row
+            if (j >= m)
             {
                 i++;
                 j = 0;
