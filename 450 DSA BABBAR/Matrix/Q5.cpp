@@ -8,6 +8,7 @@ using namespace std;
 class Solution {
   public:
     vector<vector<int>> sortedMatrix(int N, vector<vector<int>> Mat) {
+      //Copy elements of 2D matrix into a 1D array
       vector<int>temp;
       for(int i=0;i<N;i++)
       {
