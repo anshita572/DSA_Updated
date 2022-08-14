@@ -4,9 +4,9 @@ var n1=arr[1];
 console.log(n1);
 
 var guests=["REENA","MEENA","TEENA","HEENA"];
-var name=prompt("Enter your name");
-name=name.toUpperCase();
-if(guests.includes(name))
-{console.log("Hey "+name+" ! Welcome to the party");}
+var names=prompt("Enter your name");
+names=names.toUpperCase();
+if(guests.includes(names))
+{console.log("Hey "+names+" ! Welcome to the party");}
 else
-{console.log("Sorry " +name+" ! You are not invited");}
+{console.log("Sorry " +names+" ! You are not invited");}
