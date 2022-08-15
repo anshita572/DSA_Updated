@@ -9,8 +9,8 @@ if(ch>='a' && ch<='z') //i.e. ch is lowercase
 {return ch;}
 else //if(ch>='A' && ch<='Z')//i.e. ch is uppercase
 {
-    char temp = ch- 'A'+'a'; //coverting uppercase to lowercase
-    return temp;
+    ch = ch- 'A'+'a'; //coverting uppercase to lowercase
+    return ch;
 }
 }
 bool checkPalindrome(char ch[],int n)

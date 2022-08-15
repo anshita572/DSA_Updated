@@ -9,7 +9,7 @@ void reverse(string &ch)//Find length n from length function
     while(i<=j)
     {
         swap (ch[i++],ch[j--]);
-        cout<<ch<<endl;
+        // cout<<ch<<endl;
        
     }
        
