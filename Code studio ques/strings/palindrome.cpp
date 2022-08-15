@@ -1,4 +1,7 @@
 //Check Palindrome:https://bit.ly/3E55FvF 
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 char toLowercase(char ch)
 {
 if(ch>='a' && ch<='z') //i.e. ch is lowercase

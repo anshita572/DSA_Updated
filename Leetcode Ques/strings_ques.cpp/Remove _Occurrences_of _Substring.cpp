@@ -1,4 +1,7 @@
 //https://leetcode.com/problems/remove-all-occurrences-of-a-substring/
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     string removeOccurrences(string s, string part) {

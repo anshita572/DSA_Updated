@@ -1,4 +1,7 @@
 //https://leetcode.com/problems/permutation-in-string/
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     bool checkEqual(int arr1[26],int arr2[26])
