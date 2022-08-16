@@ -1,4 +1,7 @@
 //https://leetcode.com/problems/string-compression/
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     int compress(vector<char>& chars) {
