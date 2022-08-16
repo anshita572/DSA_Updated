@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/permutation-in-string/
+//TC :O(length of s2) ,SC :O(1) //constant space of 26
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,7 +43,8 @@ public:
             arr2[count2]++;     //making character count 1 for next     //character(in e.g 'd')
          char oldChar=s2[j-windowSize];
          count2=oldChar-'a';
-         arr2[count2]--; //making character count 0 for first    //character(in e.g 'e')
+         arr2[count2]--; //making character count 0 for first
+         //character(in e.g 'e')
          j++;
          if (checkEqual(arr1,arr2))  //again checking if equal ,nhi toh fir se loop chlega
         {return 1;}
