@@ -2,35 +2,34 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
+//TC : O(n)  SC:O(n)
 class Solution {
 public:
-    int compress(vector<char>& chars) {
+    int compress(vector<char>& s) {
         int i=0;
-        int n=chars.size();
-        
-        int ansIndex=0;
+        int ans=0;
+        int n=s.size();
         while(i<n)
         {
             int j=i+1;
-            while(j<n && chars[i]==chars[j])
+            while(j < n && s[i]==s[j])
+            {j++;}
+            int count=j-i;
+            s[ans]=s[i];
+            ans++;
+            if(count > 1)
             {
-                j++;
+                string str=to_string(count);
+                for(auto it : str)
+                {
+                    s[ans]=it;
+                    ans++;
+                }
+               
             }
- //we will come out of this inner while loop in 2 cases :
-//either we have traversed the entire array or we have encountered a different character
-            
-        chars[ansIndex++]= chars[i];//storing the old character
-       int count=j-i;
-        if(count>1)
-        {
-            string s=to_string(count); //converting integer count to string 
-            for(char ch : s)
-            {
-                chars[ansIndex++]=ch;//storing count character by character
-            }
+             i=j;
         }
-        i=j;  //updtaing i
-        }
-        return ansIndex;
+        return ans;
     }
 };
+    
