@@ -2,7 +2,7 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
-//Why TLE and what is TC and SC
+//TLE because of map TC will be o(n logn) and if i use unordered map then I will have to use sort and hence again O(n logn) 
 vector<pair<char,int>> duplicate_char(string s, int n){
   vector<pair<char,int>>ans;
    map<char,int>mp;
