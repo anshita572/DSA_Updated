@@ -15,7 +15,7 @@ public:
         {//s.substr(start_position,length of substring)
             string X=s.substr(0,partition);//a
             string val=s.substr(partition,s.length());//bcde
-            val=val+X;//bcde + a =bcdea
+            val=val+X;//bcde + a = bcdea
             if(val.compare(goal)==0)
             {return true;}
             else
