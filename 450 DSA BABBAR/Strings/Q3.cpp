@@ -2,6 +2,7 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
+//Why TLE and what is TC and SC
 vector<pair<char,int>> duplicate_char(string s, int n){
   vector<pair<char,int>>ans;
    map<char,int>mp;
