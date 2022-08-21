@@ -3,7 +3,7 @@
 using namespace std;
 void print(int n)
 {int x=n;
-if(n+x==0)
+if(n>=(-x))
 {return;}
 cout<<n<<" ";
 print(n-1);
