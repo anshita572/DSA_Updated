@@ -7,7 +7,7 @@ void solve(string str,string output,int index,
  vector<string> &ans)
 {  //base case;
     if(index>=str.length())
-    {if(output.length()>0) //acc to ques :there no should be no empty subsequence
+    {if(output.length()>0) //acc to ques :there should be no empty subsequence
     {   ans.push_back(output);}
         return;
     }
