@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/count-binary-substrings/
+//Return all possible consecutive combinations of 0 and 1
 //M1 : brute-force TC:O(n) SC:O(n)
 #include<iostream>
 #include <bits/stdc++.h>
@@ -7,9 +8,9 @@ class Solution {
 public:
     int countBinarySubstrings(string s) {
         int n=s.length();
-        vector<int>v(n);
+        vector<int>v(n);//to store count of 0s and 1s
         int index=0;
-        v[index]=1;
+        v[index]=1;//=>v[0]=1 i.e. 0th element ka count=1
         for(int i=1;i<n;i++)
         {if(s[i]!=s[i-1])
         {index++;

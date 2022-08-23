@@ -1,6 +1,8 @@
 //https://practice.geeksforgeeks.org/problems/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/1
 
 //TC :O(n) SC:O(1)
+
+//poore string m equal no of 0s and 1s hone chahiye.If this is true then no. of substrings with balanced 0s and 1s can be found
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
