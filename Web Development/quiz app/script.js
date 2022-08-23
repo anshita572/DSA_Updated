@@ -40,7 +40,9 @@ const option1=document.querySelector('#option1');
 const option2=document.querySelector('#option2');
 const option3=document.querySelector('#option3');
 const option4=document.querySelector('#option4');
-let count=0;
+const ans=document.querySelectorAll(".answers");
+let count=0; //question count
+let score=0;
 function loadQues(){
 // console.log(quiz[0].question);
  ques.innerText=quiz[count].question;
@@ -50,3 +52,32 @@ function loadQues(){
  option4.innerText=quiz[count].d;
 }
 loadQues();
+function getMarkedAns()
+{let markedAns;
+    ans.forEach((currAns) => {
+        if(currAns.checked)
+        {markedAns=currAns.id;}
+        
+    });
+    return markedAns;
+}
+function deselect()
+{   ans.forEach((currAns) => {
+        currAns.checked=false;        
+    });
+    
+}
+document.querySelector("#submit-btn").addEventListener("click",function(event){
+    const checkedAns=getMarkedAns(); 
+    console.log(checkedAns);
+if(checkedAns ===quiz[count].ans)
+{score++;};
+count++; //increment question count
+deselect();
+if(count <quiz.length) //move to next ques
+{loadQues();}
+else //when all ques are done ,show score
+{document.querySelector("#score").innerHTML="<h3>You scored : "+score+"/"+quiz.length+" 🙂 </h3><button class='reload-btn' onclick='location.reload()'>Play Again</button>";
+document.querySelector("#score").classList.remove("show-score");
+}
+});

@@ -28,12 +28,12 @@ box-shadow: 0 1rem 1rem -0.7rem rgba(0,0,0,0.4);
 .inner-div li{
     list-style: none;
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 input{
     cursor: pointer;
 }
-#submit-btn
+#submit-btn,.reload-btn
 {
   padding: 1rem;
   /* outline: none; */
@@ -49,16 +49,31 @@ input{
 #submit-btn:hover
 {
     background-color: #0984e3;
+    cursor: pointer;
 }
 #score{
     background-color: #dfe6e9;
     margin-top: 3rem;
-    padding: 3rem 4rem;
+    padding: 1rem 2rem;
+    /* padding-bottom: 3rem; */
     box-shadow: 0 1rem 1rem -0.7rem rgba(0,0,0,0.4);
+}
+#score h3{
+    text-align: center;
+    font-size: 3rem;
 }
 .show-score
 {display: none;}
-
+.reload-btn{
+margin-top: 2rem;
+color: #2d3436;
+background-color: #55efc4;
+}
+.reload-btn:hover{
+    color:#fff;
+    background-color: #00b894;
+    cursor: pointer;
+}
 
 
 
