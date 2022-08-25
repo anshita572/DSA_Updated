@@ -69,7 +69,7 @@ function deselect()
 }
 document.querySelector("#submit-btn").addEventListener("click",function(event){
     const checkedAns=getMarkedAns(); 
-    console.log(checkedAns);
+    // console.log(checkedAns);
 if(checkedAns ===quiz[count].ans)
 {score++;};
 count++; //increment question count
