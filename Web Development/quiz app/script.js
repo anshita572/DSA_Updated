@@ -35,21 +35,41 @@ const quiz=[{
     ans:"ans2"
 }
 ];
+const randomQues=[];
+let quesIndex=0; //question quesIndex
+function generateRandomQues(){
+const randomNo=Math.floor(Math.random()*quiz.length);
+let hitDuplicate=0;
+if(randomQues.length==0)
+{quesIndex=randomNo;}
+else{
+    for (let index = 0; index < randomQues.length; index++) {
+       if(randomNo===randomQues[index])
+       {hitDuplicate=1;}
+    }
+    if(hitDuplicate==1)
+{generateRandomQues();}
+else
+{quesIndex=randomNo;}
+}
+randomQues.push(randomNo);
+}
+
 const ques=document.querySelector('.question');
 const option1=document.querySelector('#option1');
 const option2=document.querySelector('#option2');
 const option3=document.querySelector('#option3');
 const option4=document.querySelector('#option4');
 const ans=document.querySelectorAll(".answers");
-let count=0; //question count
+
 let score=0;
 function loadQues(){
 // console.log(quiz[0].question);
- ques.innerText=quiz[count].question;
- option1.innerText=quiz[count].a;
- option2.innerText=quiz[count].b;
- option3.innerText=quiz[count].c;
- option4.innerText=quiz[count].d;
+ ques.innerText=quiz[quesIndex].question;
+ option1.innerText=quiz[quesIndex].a;
+ option2.innerText=quiz[quesIndex].b;
+ option3.innerText=quiz[quesIndex].c;
+ option4.innerText=quiz[quesIndex].d;
 }
 loadQues();
 function getMarkedAns()
@@ -67,30 +87,25 @@ function deselect()
     });
     
 }
-function select()
-{   ans.forEach((currAns) => {
-        currAns.checked=true;        
-    });
-    
-}
+
 document.querySelector("#submit-btn").addEventListener("click",function(event){
     const checkedAns=getMarkedAns(); 
     // console.log(checkedAns);
-if(checkedAns ===quiz[count].ans)
+if(checkedAns ===quiz[quesIndex].ans)
 {score++;};
-count++; //increment question count
+quesIndex++; //increment question quesIndex
 deselect();
-if(count===quiz.length-1)
+if(quesIndex===quiz.length-1)
 {document.querySelector("#submit-btn").innerHTML="Submit";}
-if(count <quiz.length) //move to next ques
+if(quesIndex <quiz.length) //move to next ques
 {loadQues();}
 else //when all ques are done ,show score
 {document.querySelector(".inner-div").innerHTML="<div id='score'>You scored : "+score+"/"+quiz.length+" 🙂 </div><button class='reload-btn' onclick='location.reload()'>Play Again</button>";
 // document.querySelector("#score").classList.remove("show-score");
 }
 });
-// document.querySelector("#prev-btn").addEventListener("click",function(event){if(count>0)
-// {count--;
+// document.querySelector("#prev-btn").addEventListener("click",function(event){if(quesIndex>0)
+// {quesIndex--;
 // loadQues();
 // getMarkedAns();
 // select();}});
