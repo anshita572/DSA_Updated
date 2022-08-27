@@ -67,6 +67,12 @@ function deselect()
     });
     
 }
+function select()
+{   ans.forEach((currAns) => {
+        currAns.checked=true;        
+    });
+    
+}
 document.querySelector("#submit-btn").addEventListener("click",function(event){
     const checkedAns=getMarkedAns(); 
     // console.log(checkedAns);
@@ -74,10 +80,17 @@ if(checkedAns ===quiz[count].ans)
 {score++;};
 count++; //increment question count
 deselect();
+if(count===quiz.length-1)
+{document.querySelector("#submit-btn").innerHTML="Submit";}
 if(count <quiz.length) //move to next ques
 {loadQues();}
 else //when all ques are done ,show score
-{document.querySelector("#score").innerHTML="<h3>You scored : "+score+"/"+quiz.length+" 🙂 </h3><button class='reload-btn' onclick='location.reload()'>Play Again</button>";
-document.querySelector("#score").classList.remove("show-score");
+{document.querySelector(".inner-div").innerHTML="<div id='score'>You scored : "+score+"/"+quiz.length+" 🙂 </div><button class='reload-btn' onclick='location.reload()'>Play Again</button>";
+// document.querySelector("#score").classList.remove("show-score");
 }
 });
+// document.querySelector("#prev-btn").addEventListener("click",function(event){if(count>0)
+// {count--;
+// loadQues();
+// getMarkedAns();
+// select();}});
