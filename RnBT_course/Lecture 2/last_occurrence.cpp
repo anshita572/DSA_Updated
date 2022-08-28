@@ -1,7 +1,7 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
-int getIndex(int arr[],int index,int size,int &target)
+int getIndex(int arr[],int index,int size,int target)
 {
     if(index<0)
     {return -1;}

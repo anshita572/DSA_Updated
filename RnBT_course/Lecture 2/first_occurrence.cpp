@@ -1,7 +1,7 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
-// int getIndex(int arr[],int index,int size,int &target)
+// int getIndex(int arr[],int index,int size,int target)
 // {
 //     if(index==size)
 //     {return -1;}
@@ -10,7 +10,7 @@ using namespace std;
 //     return getIndex(arr,index+1,size,target);
 
 // }
-int getIndex(int arr[],int index,int count,int size,int &target)
+int getIndex(int arr[],int index,int count,int size,int target)
 {
     if(count==size)
     {return -1;}
