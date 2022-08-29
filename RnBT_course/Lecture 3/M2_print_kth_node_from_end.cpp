@@ -27,23 +27,32 @@ void insertAtTail(node *&tail, int d)
 }
 //Print LL recursively
 void printNode(node *&head)
-{
+{ //base case
    if(head==NULL)
    {return;}
    cout<<head->data<<" ";
    printNode(head->next);
-
 }
+void kthNode(node *&head,int& k)
+{if(head==NULL)
+{return;}
+kthNode(head->next,k);
+k--;
+if(k==0)
+{cout<<head->data;}}
 int main()
 {
-    node *node1 = new node(10);
+    node *node1 = new node(5);
     node *head = node1;
     node *tail = node1;
-    // printNode(head);
-    insertAtTail(tail, 12);
-    // printNode(head);
-    insertAtTail(tail, 15);
+    insertAtTail(tail, 4);
+    insertAtTail(tail, 1);
+    insertAtTail(tail, 3);
+    insertAtTail(tail, 2);
     printNode(head);
+    cout<<endl;
+    int k=3;
+    kthNode(head,k);
 
     return 0;
 }

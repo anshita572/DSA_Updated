@@ -34,6 +34,16 @@ void printNode(node *&head)
    printNode(head->next);
 
 }
+int getLength(node*&head,int length=0)
+{if(head==NULL)
+   {return length;}   
+return getLength(head->next,length++);
+}
+int kthNode(node*&head,int length,int k,int i)
+{int i=0;
+if(i==length-k+1)
+{return head->data;}}
+
 int main()
 {
     node *node1 = new node(10);
