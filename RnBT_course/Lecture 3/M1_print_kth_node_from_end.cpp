@@ -1,3 +1,5 @@
+//Done iteratively
+//Doubt : recursively
 #include <iostream>
 using namespace std;
 class node
@@ -34,26 +36,37 @@ void printNode(node *&head)
    printNode(head->next);
 
 }
-int getLength(node*&head,int length=0)
-{if(head==NULL)
-   {return length;}   
-return getLength(head->next,length++);
+void kthNode(node* &head,int &k)
+{node*temp=head;
+int len=0;
+while(temp!=NULL)
+{temp=temp->next;
+len++;}
+temp=head;
+for (int i = 0; i < len-k; i++)
+{
+    temp=temp->next;
 }
-int kthNode(node*&head,int length,int k,int i)
-{int i=0;
-if(i==length-k+1)
-{return head->data;}}
+cout<< temp->data;
+
+
+}
 
 int main()
 {
-    node *node1 = new node(10);
+    node *node1 = new node(1);
     node *head = node1;
     node *tail = node1;
     // printNode(head);
-    insertAtTail(tail, 12);
+    insertAtTail(tail, 2);
     // printNode(head);
-    insertAtTail(tail, 15);
+    insertAtTail(tail, 3);
+    insertAtTail(tail, 4);
+    insertAtTail(tail, 5);
     printNode(head);
+    cout<<endl;
+    int k=2;
+  kthNode(head,k);
 
     return 0;
 }
