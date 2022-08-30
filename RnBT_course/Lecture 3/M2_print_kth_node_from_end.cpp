@@ -34,9 +34,10 @@ void printNode(node *&head)
    printNode(head->next);
 }
 void kthNode(node *&head,int& k)
-{if(head==NULL)
+{if(head==NULL) //base case
 {return;}
 kthNode(head->next,k);
+//when base case is reached(control will reach Line 41),vaapis jaate vakt do k--
 k--;
 if(k==0)
 {cout<<head->data;}}

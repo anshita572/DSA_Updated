@@ -28,10 +28,10 @@ void insertAtTail(node *&tail, int d)
 //Print LL recursively
 void printNode(node *&head)
 {
-   if(head==NULL)
+   if(head==NULL) //base case
    {return;}
    cout<<head->data<<" ";
-   printNode(head->next);
+   printNode(head->next);//recursive call
 
 }
 int main()
