@@ -56,6 +56,13 @@ node *reverse_k(node *&head, int k)
     {
         return NULL;
     }
+    node*temp=head;
+    int len;
+    while(temp!=NULL)
+    {temp=temp->next;
+    len++;}
+    if(len/k==0)
+    {return head;}
     // we will reverse 1 grp and recursion will reverse rest of the groups
     node *prev = NULL;
     node *curr = head;
@@ -74,6 +81,7 @@ node *reverse_k(node *&head, int k)
         // head->next = reverse_k(forward, k); or
         node*recursionKaAns=reverse_k(forward, k);
         head->next=recursionKaAns;
+        len--;
     }
     return prev;
 }
@@ -89,7 +97,7 @@ int main()
     insertAtTail(tail,6);
     printNode(head);
     cout<<endl;
-    int k=2;
+    int k=4;
     head=reverse_k(head,k);
  printNode(head);
     return 0;
