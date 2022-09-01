@@ -4,8 +4,10 @@
 using namespace std;
 char upper(string s,int i,char ans)
 {
-    if(s[i]=='\0')
-    {return 0;}
+    // if(s[i]=='\0')
+    // {return 0;} OR
+    if(i==s.length())
+    {return ans;}
     if(s[i]>='A' && s[i]<='Z')
     {ans=s[i];
     return ans;}
@@ -13,8 +15,8 @@ char upper(string s,int i,char ans)
 }
 int main(){
     int n;
-string s="heLlO";
-char ans;
+string s="bYe";
+char ans='0';
 ans=upper(s,0,ans);
 cout<<ans;
 return 0;
