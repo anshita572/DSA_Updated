@@ -9,13 +9,13 @@ void subseq(string s, string ans, int i)
         return;
     }
     subseq(s, ans + s[i], i + 1);
-    cout << "i : " << i << endl;
+    // cout << "i : " << i << endl;
     subseq(s, ans, i + 1);
 }
 
 int main()
 {
-    string s = "ab";
+    string s = "abc";
     string ans = "";
     subseq(s, ans, 0);
     return 0;
