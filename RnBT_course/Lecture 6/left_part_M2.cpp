@@ -3,14 +3,14 @@
 using namespace std;
 void solve(int arr[],int s,int e)
 {
-    if(s>=e)
+    if(s>=e)//base case
     {cout<<arr[s];
         return;}
     int mid=s+(e-s)/2;
     for(int i=0;i<=e;i++)
     {cout<<arr[i]<<" ";}
     cout<<endl;
-    solve(arr,s,mid);
+    solve(arr,s,mid);//recursive call
 }
 int main(){
 int n=7;
