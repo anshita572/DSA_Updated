@@ -8,14 +8,14 @@ void subseq(string s, string ans, int i)
         cout << ans << endl;
         return;
     }
-    subseq(s, ans + s[i], i + 1);
+    subseq(s, ans + s[i], i + 1);//include
     // cout << "i : " << i << endl;
-    subseq(s, ans, i + 1);
+    subseq(s, ans, i + 1);//exclude
 }
 
 int main()
 {
-    string s = "abc";
+    string s = "ab";
     string ans = "";
     subseq(s, ans, 0);
     return 0;
