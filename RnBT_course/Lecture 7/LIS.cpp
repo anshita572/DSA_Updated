@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/longest-increasing-subsequence/
-//TLE with recursion ,optimised with DP + binary search
+//TLE with recursion ,optimized with DP + binary search
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
