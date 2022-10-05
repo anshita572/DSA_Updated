@@ -7,9 +7,10 @@ class Solution {
 public:
     int solve(vector<int>& nums,int diff,int i)
     {
-        if(i<0)
+        if(i<0)//base case
         {return 0;}
         int ans=0;
+        //backward check
         for(int k=i-1;k>=0;k--)
         {
             if(nums[i]-nums[k]==diff)
