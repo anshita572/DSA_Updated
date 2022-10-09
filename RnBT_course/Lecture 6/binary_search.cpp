@@ -1,3 +1,4 @@
+//TC : O(log n) (same as iterative binary search)
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
