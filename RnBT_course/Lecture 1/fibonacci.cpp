@@ -1,4 +1,5 @@
 // fibonacci series : 0,1,1,2,3,5,8,13...
+//TC : O(2^n)
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
