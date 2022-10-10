@@ -13,7 +13,7 @@ class Solution {
             {i=i+2;} //jump to next even position
             else if(arr[j]%2 !=0) //if odd position has odd no.
             {j=j+2;} //jump to next odd position
-            else//if(arr[i]!=0)
+            else//if(arr[i]%2 !=0)
             {swap(arr[i],arr[j]);}
         }
     }
