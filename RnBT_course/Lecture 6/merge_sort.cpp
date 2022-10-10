@@ -1,4 +1,5 @@
 //TC : O(nlogn)
+//SC :O(n)
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;

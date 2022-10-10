@@ -1,4 +1,5 @@
 //TC : O(log n) (same as iterative binary search)
+//SC :O(log n)  (iterative SC : O(1))
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
