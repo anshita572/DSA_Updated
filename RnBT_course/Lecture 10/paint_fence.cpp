@@ -1,4 +1,4 @@
-//TLE with recursion
+//TLE with recursion((TC : 2^n))
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
