@@ -11,6 +11,7 @@ public:
     {13, "Thirteen "}, {12, "Twelve "}, {11, "Eleven "}, {10, "Ten "}, {9, "Nine "}, {8, "Eight "}, 
     {7, "Seven "}, {6, "Six "}, {5, "Five "}, {4, "Four "}, {3, "Three "}, {2, "Two "}, {1, "One "}};
     
+    //jaise int m return 0 krte,void m return;string m agar kuch na return krna ho do return ""
     string solve(int num)
     {
         //base case
