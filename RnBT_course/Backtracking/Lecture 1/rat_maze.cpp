@@ -83,7 +83,7 @@ int srcx = 0;
         }cout << endl;
     }
 
-    string output = "";
+    //string output = "";
 
     bool ans = solve(srcx, srcy, destx, desty, board, visited);
     cout << "Src to Dest is possible or not " << ans << endl;
