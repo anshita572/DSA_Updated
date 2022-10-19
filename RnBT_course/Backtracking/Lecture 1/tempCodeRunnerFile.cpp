@@ -4,7 +4,7 @@ using namespace std;
 bool isSafe(int x,int y,int board[4][4],bool visited[4][4])
 {   int rowSize=4;
     int colSize=4;
-    if((x>=0 && x<4)&& (y>=0 && y<4)&& (visited[x][y]==false) && (board[x][y]==0))
+    if((x>=0 && x<4)&& (y>=0 && y<4)&& (visited[x][y]==false) && (board[x][y]==1))
     {return true;}
     return false;
 }
@@ -54,10 +54,10 @@ else
 {return false;}
 }
 int main(){
-int board[4][4]={{0,0,1,0},
-                 {0,0,1,0},
-                 {1,0,0,0},
-                 {1,0,0,0}   };
+int board[4][4]={{1,1,1,0},
+                 {1,1,1,0},
+                 {1,1,1,0},
+                 {1,1,1,0}   };
 bool visited[4][4];
 for(int i=0;i<4;i++)
 {
@@ -70,10 +70,5 @@ int src_y=0;
 int dest_x=3;
 int dest_y=3;
 bool ans=solve(src_x,src_y,dest_x,dest_y,board,visited);
-if(ans)
-{cout<<"Yes path exists"<<endl;}
-else
-{cout<<"No path does not exist"<<endl;}
-
 return 0;
 }
