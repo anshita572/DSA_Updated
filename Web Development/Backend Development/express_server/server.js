@@ -15,6 +15,16 @@ app.get("/about",function(request,response)
     // console.log(request);
     response.send("Hey there ! <br> I am a programmer");
 })
+app.get("/education",function(request,response)
+{
+    // console.log(request);
+    response.send("Btech in CSE");
+})
+app.get("/hobbies",function(request,response)
+{
+    // console.log(request);
+    response.send("sleeping");
+})
 app.listen(3001,function(){
     console.log("Server started on port 3001")
 });
