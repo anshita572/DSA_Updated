@@ -14,8 +14,9 @@ if(j>=0)
 int sum=first+second+carry;
 int last_dig=sum%10;
 carry=sum/10;
-ans.push_back(last_dig);
+
 add(s1,s2,i-1,j-1,carry,ans);
+ans.push_back(last_dig);
 
 }
 int main(){
@@ -23,7 +24,7 @@ string s1="61";
 string s2="79";
 vector<int>ans;
 add(s1,s2,s1.length()-1,s2.length()-1,0,ans);
-reverse(ans.begin(),ans.end());
+// reverse(ans.begin(),ans.end());
 for(auto i:ans)
 {cout<<i;}
 return 0;
