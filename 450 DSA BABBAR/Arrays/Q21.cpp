@@ -37,7 +37,7 @@ class Solution{
             sum+=arr[i];
             // if(sum==0)
             // {return true;}
-            if(mp.find(sum)==mp.end())
+            if(mp.find(sum)==mp.end()) //if sum not already present in map,insert it
             {mp[sum]=i+1;}
             else
             {return true;}
