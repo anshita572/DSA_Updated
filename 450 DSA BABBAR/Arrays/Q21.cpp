@@ -2,6 +2,7 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
+//M1 : using Set
 class Solution{
     public:
     //TC :O(N)
@@ -19,6 +20,29 @@ class Solution{
         s.insert(prefix_sum);
     }
     return false;
+    }
+};
+//M2 : using unordered_map
+class Solution{
+    public:
+    //Complete this function
+    //Function to check whether there is a subarray present with 0-sum or not.
+    bool subArrayExists(int arr[], int n)
+    {
+        unordered_map<int,int>mp;
+        mp[0]=0;
+        int sum=0;
+        for(int i=0;i<n;i++)
+        {
+            sum+=arr[i];
+            // if(sum==0)
+            // {return true;}
+            if(mp.find(sum)==mp.end())
+            {mp[sum]=i+1;}
+            else
+            {return true;}
+        }
+        return false;
     }
 };
 //Brute force 
