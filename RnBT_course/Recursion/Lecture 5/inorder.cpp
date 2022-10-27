@@ -1,4 +1,6 @@
 //https://leetcode.com/problems/binary-tree-inorder-traversal/
+
+//TC :O(n) SC:O(n)
 class Solution {
 public:
     void solve(TreeNode* root,vector<int>&ans) {
