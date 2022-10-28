@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/generate-parentheses/
 //TC : O(4^n)  SC : O(4^n)
-// Every level, you are making 2 decisions and the maximum height of the decision tree is 2^n since n is the number of pairs of "(" and ")". So therefore the Time and Space Complexity would be 2*(2^n) or 4^n.
+// At every level, you are making 2 decisions and the maximum height of the decision tree is 2^n since n is the number of pairs of "(" and ")". So therefore the Time and Space Complexity would be 2*(2^n) or 4^n.
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
