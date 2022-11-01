@@ -9,13 +9,13 @@ public:
         for(int i=0;i<9;i++)
         {
             //row check
-            if(board[row][i]==no+'0')
+            if(board[row][i]==no+'0') //converting int to char
             {return false;}
             //column check
              if(board[i][col]==no+'0')
             {return false;}
-            // 3 X 3 matrix check
             
+            // 3 X 3 matrix check
             if(board[3*(row/3) + (i/3)][3*(col/3)+ (i%3)] == no + '0')
             {return false;}
 
@@ -28,22 +28,24 @@ public:
         {
             for(int j=0;j<9;j++)
             {if(board[i][j]=='.')
-            {
-                for(int no=1;no<=9;no++)
+              {
+                for(int no=1;no<=9;no++) // or can use char no='0',then no need of no+'0'
                 {
                     if(isSafe(board,i,j,no))
-                    {  board[i][j]=no+'0';
+                    {  board[i][j]=no+'0'; //converting int to char
                         bool recursiveCall=solve(board);
                     if(recursiveCall==true)
                     {return true;}
-                    else
-                    {board[i][j]='.';}
+                    // else
+                    // {board[i][j]='.';}
                     }
                 }
+                board[i][j]='.';
                 return false;
-            }}
+             }
+            }
         }
-        return true;
+        return true;//jab poora board fill ho gya and poora board sara traverse ho gya then return true
     }
     void solveSudoku(vector<vector<char>>& board) {
         solve(board);
