@@ -11,7 +11,7 @@ if(arr[mid]==key)
 {return true;}
 else if(arr[mid]<key)
 {return binarySearch(arr,mid+1,e,key);}
-else
+else //if(arr[mid]>key)
 {return binarySearch(arr,s,mid-1,key);}}
 int main(){
 int n=7;
