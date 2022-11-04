@@ -8,7 +8,7 @@ public:
 bool isConvertible(string a,string b)//function to check if possible to convert one string to another (only if difference==1)
 {
     // if(a.length()!=b.length || a.length==0)
-    // {return false;}
+    // {return false;} //no need to apply these checks (see constraints of ques)
     int count=0;
     for(int i=0;i<a.length();i++)
     {if(a[i]!=b[i])
@@ -24,12 +24,12 @@ int min(int a,int b)
 {return a;}
 else
 {return b;}}
-bool solve(string src,string dest,vector<string>&dict,map<string,bool>&visited,vector<string> &path ,vector<vector<string>>&ans,int &ans_size)
+bool solve(string src,string dest,vector<string>&dict,map<string,bool>&visited,vector<string> &path ,vector<vector<string>>&ans,int &path_size)
 {
     //base case
     if(dest.compare(path[path.size()-1])==0) //path's last string == dest
     {ans.push_back(path);
-    ans_size=min(path.size(),ans_size);
+    path_size=min(path.size(),path_size);
     return true;}
     for(auto word:dict)
     {if(isConvertible(src,word))
@@ -37,7 +37,7 @@ bool solve(string src,string dest,vector<string>&dict,map<string,bool>&visited,v
     {//Action
         path.push_back(word);
     visited[word]=true;
-    solve(word,dest,dict,visited,path,ans,ans_size);//Recursion
+    solve(word,dest,dict,visited,path,ans,path_size);//Recursion
     //Backtracking
     path.pop_back();
     visited[word]=false;}
@@ -48,13 +48,13 @@ bool solve(string src,string dest,vector<string>&dict,map<string,bool>&visited,v
     vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
         vector<string>path;
         vector<vector<string>>ans;
-        vector<vector<string>>finalAns;
-        int ans_size=INT_MAX;
+         vector<vector<string>>finalAns;     
+        int path_size=INT_MAX;
         map<string,bool>visited;
         path.push_back(beginWord);
-        solve(beginWord,endWord,wordList,visited,path,ans,ans_size);
+        solve(beginWord,endWord,wordList,visited,path,ans,path_size);
         for(auto i:ans)
-        {if(i.size()==ans_size)
+        {if(i.size()==path_size)
         {finalAns.push_back(i);}}
         return finalAns;
 
