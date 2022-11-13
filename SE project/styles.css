@@ -59,7 +59,7 @@ body{
 }
 
 .container.active .forms{
-    height: 600px;
+    height: 725px;
 }
 .container .form .title{
     position: relative;
@@ -74,7 +74,7 @@ body{
     bottom: 0;
     height: 3px;
     width: 30px;
-    background-color: #4070f4;
+    /* background-color: #4070f4; */
     border-radius: 25px;
 }
 

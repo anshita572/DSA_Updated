@@ -1,15 +1,15 @@
  
 
 <!DOCTYPE html>
-<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ===== Iconscout CSS =====
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="styles.css">
@@ -71,11 +71,27 @@
                     <div class="input-field">
                         <input type="password" class="password" placeholder="Create a password" required>
                         <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
-                    <div class="input-field">
-                        <input type="password" class="password" placeholder="Confirm a password" required>
+                    <!-- <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm your password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
+                    </div> -->
+                    <div class="input-field">
+                        <input type="tel" class="mobile" placeholder="Enter your Mobile No." required>
+                        <i class="uil uil-phone"></i>
+                       
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="city" placeholder="Enter your city" required>
+                        <i class="uil uil-location-point"></i>
+                       
+                    </div>
+                    <div class="input-field">
+                        <input type="number" class="qty" placeholder="Enter quantity of Stubble(in quintal)" required>
+                        <i class="uil uil-pagelines"></i>
+                       
                     </div>
 
                     <div class="checkbox-text">
@@ -86,7 +102,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Signup">
+                        <input type="button" value="Signup" onclick="window.open('#');">
                     </div>
                 </form>
 
