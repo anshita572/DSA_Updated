@@ -32,3 +32,13 @@ const container = document.querySelector(".container"),
     login.addEventListener("click", ( )=>{
         container.classList.remove("active");
     });
+   
+    const scriptUrl='https://script.google.com/macros/s/AKfycbxQQOucpr-a0I1jpYIayuJPREnY8l9Dn35L0Zc9GdHNx43UYmNNghFAT8KL6YtGfXbX_Q/exec';
+
+    const form=document.forms['feedback_form'];
+    form.addEventListener('submit',e=>{
+        e.preventDefault();
+        fetch(scriptUrl,{method:'POST',body:new FormData(form)})
+        .then(response => alert('Thanks for your valuable feedback'))
+        .catch(error=>console.log('Error',error.message))
+    })
