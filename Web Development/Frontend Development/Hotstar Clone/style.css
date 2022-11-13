@@ -53,7 +53,7 @@ body {
   font-weight: 500;
   transition: 0.5s;
 }
-.search-box:focus   /*so that whenever serach box is clicked ,its width increases to 400 px and border color 
+.search-box:focus   /*so that whenever search box is clicked ,its width increases to 400 px and border color 
 changes to blue (look at original hotstar website to understand)*/ {
   width: 400px;
   border-color: #1f80e0;
