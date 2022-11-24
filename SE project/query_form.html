@@ -5,12 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Josefin+Sans&family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *{
+        font-family: "Josefin Sans", sans-serif;
+        /* background-color:hsl(206, 92%, 94%) ; */
+      }
+      .link
+      {color: #fff;}
+      .link:hover 
+      { color: #fff;
+      text-decoration: none; }
+      
+    </style>
     <script src="query.js"></script>
 
     <!-- <script
@@ -34,21 +53,36 @@
   <body>
     <div class="container border mt-3 bg-light">
       <div class="row">
+        
         <div class="col-md-6 p-5 bg-primary text-white">
+          
           <h1>Facing any trouble ?</h1>
+          <br>
+          
           <h4>
-            Drop your query here <br> We will resolve it within 24 hours !
+            Drop your query here <br><br> We will resolve it within 24 hours !
           </h4>
+          <br><br>
+          <i class="fas fa-paper-plane"></i>
+          <span>Email : </span> <a class="link" href="mailto:help@stubble.com">help@stubble.com</a>
+          <br><br>
+          <i class="fas fa-phone-alt"></i>
+          <span>Helpline No : </span> <a class="link"href="tel:+91 99152 65635">+91 99152 65635</a>
+          <br><br>
+          <i class="fas fa-globe"></i>
+                        <span>Website:</span> <a class="link" href="stubble.html">stubble.com</a>
         </div>
         <div class="col-md-6 border-left py-3">
-          <h1>Contact form</h1>
+          
           <div class="form-group">
             <h5 for="name">Name</h5>
             <input
               type="text"
               class="form-control"
               id="name"
-              placeholder="Enter name"
+              pattern="^([^\p{N}\p{S}\p{C}\p{P}]{2,20})$"
+              title="Please enter a valid name"
+              placeholder="Enter name * "
             />
           </div>
           <div class="form-group">
@@ -57,14 +91,16 @@
               type="email"
               class="form-control"
               id="email"
-              placeholder="Enter email"
+              placeholder="Enter email *"
+              value=""
+              required=""
             />
           </div>
           <div class="form-group">
             <h5 for="message">Message</h5>
-            <textarea class="form-control" id="message" rows="3"></textarea>
+            <textarea placeholder="Your message *" class="form-control" id="message" rows="3"></textarea>
           </div>
-          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+          <button class="btn btn-primary" onclick="sendMail()">Send Message</button>
         </div>
       </div>
     </div>

@@ -127,7 +127,8 @@
           >
             <div class="row register-form">
               <div class="col-md-12">
-                <form method="post" autocomplete="off" name="google-sheet">
+               
+                <form method="post" autocomplete="off"name="google-sheet">
                   <div class="form-group">
                     <input
                       type="text"
@@ -172,7 +173,7 @@
                   </div>
                   <div class="form-group">
                     <input
-                      type="number "
+                      type="number"
                       step="0.01"
                       name="Quantity"
                       class="form-control"
@@ -205,10 +206,20 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) =>
-            alert("Thanks for Contacting us..! We Will Contact You Soon...")
-          )
+          // .then((response) =>
+          //   alert("Thanks for Contacting us..! We Will Contact You Soon...")
+            
+          // )
           .catch((error) => console.error("Error!", error.message));
+          var clickedBtn=confirm("Thanks for Contacting us..! We Will Contact You Soon...");
+if (clickedBtn==true) {
+  //pressed ok. Redirect to url
+  window.location = "stubble.html";
+} 
+// else {
+//   //pressed cancel
+// }
+          
       });
     </script>
 
