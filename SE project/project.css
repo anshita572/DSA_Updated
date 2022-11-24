@@ -9,9 +9,36 @@
 }
 body
 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
+.site
+{
+  border-radius: 94%;
+width: 400px;
+height: 400px;
+position: relative;
+top: 48px;
+left: 101px;
+}
+.logo
+{
+position: relative;
+bottom: 240px;
+font-family: 'Pacifico', cursive;
+font-weight: bolder;
+}
+.tagline
+{font-family: 'Pacifico', cursive;
+  font-weight: bolder;
+  color: #379237;
+  position: relative;
+  top: 75px;
+  right: 400px;
+  font-size: 2.5rem;
 
+}
+.nav-links
+{font-size: 1.3rem;}
 ul
 {
   list-style:none;
