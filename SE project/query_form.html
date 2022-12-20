@@ -62,7 +62,7 @@
       <div class="row">
         
         <div class="col-md-6 p-5 bg-primary text-white">
-          
+          <form id="myform" method="post" autocomplete="off">
           <h1>Facing any trouble ?</h1>
           <br>
           
@@ -90,6 +90,8 @@
               pattern="^([^\p{N}\p{S}\p{C}\p{P}]{2,20})$"
               title="Please enter a valid name"
               placeholder="Enter name * "
+              value=""
+              required
             />
           </div>
           <div class="form-group">
@@ -105,10 +107,15 @@
           </div>
           <div class="form-group">
             <h5 for="message">Message</h5>
-            <textarea placeholder="Your message *" class="form-control" id="message" rows="3"></textarea>
+            <textarea placeholder="Your message *" class="form-control" id="message" rows="3"
+            value=""
+            required=""></textarea>
           </div>
-          <button class="btn btn-primary" onclick="sendMail()">Send Message</button>
+          
+          <button  class="btn btn-primary" onclick="sendMail()">Send Message</button>
+          <!-- <button type="submit" id="EnterKeyIntercepter" style="cursor: auto; outline: transparent;"></button> -->
         </div>
+      </form>
       </div>
     </div>
   </body>
