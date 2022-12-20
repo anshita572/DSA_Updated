@@ -24,7 +24,7 @@ int solveSO(int n)
         prev2=prev1;
         prev1=curr;
     }
-    return curr;
+    return curr; //OR return prev1
 }
 int main(){
 int n=6;

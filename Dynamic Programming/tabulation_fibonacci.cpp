@@ -13,10 +13,11 @@ int solve(int n)
     return ans;
 }
 int tabuSolve(int n)
-{vector<int>dp(n+1,0);
+{vector<int>dp(n+1,0); //Step 1
+//Step 2
 dp[0]=0;
 dp[1]=1;
-for(int i=2;i<=n;i++)
+for(int i=2;i<=n;i++) //Step 3
 {int ans=dp[i-1]+dp[i-2];
 dp[i]=ans;
 }
