@@ -15,7 +15,7 @@ int solve(int n)
 //Recursion + Memoisation
 // Step 1 : create dp array and pass in function
 // Step 2 : store the ans in dp array
-// Step 3 :check if dp array already ans , if yes return .Write this statement just after the base case
+// Step 3 :check if dp array already has ans , if yes return .Write this statement just after the base case
 int solveMemo(int n,vector<int>&dp)
 {
     //base case
