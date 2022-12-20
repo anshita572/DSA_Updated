@@ -12,7 +12,7 @@ dp[i]=ans;
 }
 return dp[n];
 }
-//Space Optimisation
+//Space Optimization
 int solveSO(int n)
 {
     int prev1=1;
