@@ -6,3 +6,4 @@ if(command==='add')
 {console.log("Adding notes ! ")}
 else if(command==='remove')
 {console.log("Removing notes ! ")}
+if
