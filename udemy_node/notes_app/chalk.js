@@ -1,2 +1,5 @@
 const chalk=require('chalk')
-console.log(chalk.green("Success"))
+const greenMsg=chalk.green('Success')
+console.log(greenMsg)
+console.log(chalk.bold('Hey there'))
+console.log(chalk.inverse('Whats up'))
