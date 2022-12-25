@@ -12,8 +12,23 @@ const yargs=require('yargs')
 yargs.command({
     command:'add',   //name of command
     describe:'Adding a new note', //description (optional)
-    handler:function()   //main thing what is going to happen when this command is used
-    {console.log('Adding a new note')}
+    builder:{
+        title:{
+            describe:'Note title',
+            demandOption:true, //if I don't provide title in terminal ,it will give an error if demandOption is set to true (by default demandOption is false)
+            type:'string' //if I don't specify the type as string ,by default it will take title as boolean type
+
+        },
+        body:{
+            describe: 'Note body',
+            demandOption:true,
+            type:'string'
+        }
+    },
+    handler:function(argv)   //main thing what is going to happen when this command is used
+    {console.log('Title : '+argv.title)
+    console.log('Body : '+argv.body)
+}
 })
 yargs.command({
     command:'remove',
@@ -30,6 +45,7 @@ yargs.command({
 yargs.command({
     command:'read',
     describe:'Reading a note',
+
     handler:function()
     {console.log('Read a note')}
 })
