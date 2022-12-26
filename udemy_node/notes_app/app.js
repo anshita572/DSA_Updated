@@ -1,4 +1,5 @@
 const yargs=require('yargs')
+const notes=require('./notes.js')
 // const chalk=require('chalk')
 // // console.log(chalk.bold('Hey there'))
 // console.log(process.argv)
@@ -26,8 +27,7 @@ yargs.command({
         }
     },
     handler:function(argv)   //main thing what is going to happen when this command is used
-    {console.log('Title : '+argv.title)
-    console.log('Body : '+argv.body)
+    {notes.addNote(argv.title,argv.body)
 }
 })
 yargs.command({
