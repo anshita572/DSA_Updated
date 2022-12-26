@@ -4,7 +4,7 @@ const getNotes=function()
 const addNote=function(title,body){
     const notes=loadNotes()
     // console.log(notes)
-    const duplicateNotes=notes.filter(function(note){
+    const duplicateNotes=notes.filter(function(note){ //to avoid taking duplicate notes
         // return note.title===title
         if(note.title===title)
         {return true}
