@@ -1,4 +1,5 @@
 const fs=require('fs')
+const chalk=require('chalk')
 const getNotes=function()
 {return "Your notes..."}
 const addNote=function(title,body){
@@ -8,19 +9,31 @@ const addNote=function(title,body){
         // return note.title===title
         if(note.title===title)
         {return true}
-    })
+    })//duplicate notes will have notes with titles that already exist
     if(duplicateNotes.length===0) //if no duplicate note
     {notes.push({
         title:title,
         body:body   
     })
     saveNotes(notes)
-console.log("New note taken ! ")}
+console.log(chalk.green.inverse("New note taken ! "))}
 else{
-    console.log("Note has already been taken !")
+    console.log(chalk.red.inverse("Note has already been taken !"))
 }
     
 }
+const removeNote=function(title)
+{const notes=loadNotes()
+const notesToKeep=notes.filter(function(note){
+    // return note.title!==title
+    if(note.title!==title)  //if the note title != title being passed in terminal,keep those notes
+    {return true}
+})
+if(notes.length>notesToKeep.length)
+{saveNotes(notesToKeep)
+console.log(chalk.green.inverse("Note removed !"))}
+else
+{console.log(chalk.red.inverse("No note found !"))}}
 const saveNotes=function(notes)
 {
     const dataJSON=JSON.stringify(notes)
@@ -37,5 +50,6 @@ const loadNotes=function(){
 }
 module.exports={
     getNotes:getNotes,
-    addNote:addNote
+    addNote:addNote,
+    removeNote:removeNote
 } //to export multiple functions
