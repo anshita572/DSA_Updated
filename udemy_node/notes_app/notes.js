@@ -1,16 +1,10 @@
 const fs=require('fs')
 const chalk=require('chalk')
-const getNotes=function()
-{return "Your notes..."}
 const addNote=function(title,body){
     const notes=loadNotes()
     // console.log(notes)
-    const duplicateNotes=notes.filter(function(note){ //to avoid taking duplicate notes
-        // return note.title===title
-        if(note.title===title)
-        {return true}
-    })//duplicate notes will have notes with titles that already exist
-    if(duplicateNotes.length===0) //if no duplicate note
+    const duplicateNote=notes.find((note)=>note.title===title)
+    if(!duplicateNote)
     {notes.push({
         title:title,
         body:body   
@@ -22,6 +16,26 @@ else{
 }
     
 }
+
+    //OR (find se jahan duplicate mila vahin ruk k else wali statement will execute)(filter se agar ek duplicate mil gya toh bhi sbhi notes check honge i.e. sare duplicates find honge)=>find is more efficient
+    
+//     const duplicateNotes=notes.filter(function(note){ //to avoid taking duplicate notes
+//         // return note.title===title
+//         if(note.title===title)
+//         {return true}
+//     })//duplicate notes will have notes with titles that already exist
+//     if(duplicateNotes.length===0) //if no duplicate note
+//     {notes.push({
+//         title:title,
+//         body:body   
+//     })
+//     saveNotes(notes)
+// console.log(chalk.green.inverse("New note taken ! "))}
+// else{
+//     console.log(chalk.red.inverse("Note has already been taken !"))
+// }
+    
+//}
 const removeNote=function(title)
 {const notes=loadNotes()
 const notesToKeep=notes.filter(function(note){
@@ -38,10 +52,18 @@ const listNote=()=>{
     const notes=loadNotes()
     console.log(chalk.inverse('Your notes'))
     notes.forEach((i)=>{
-        console.log(chalk.inverse.magenta(i.title))
+        console.log(chalk.inverse.yellow(i.title))
     })
 }
-
+const readNote=(title)=>{
+const notes=loadNotes()
+const note=notes.find((note)=>note.title===title)
+if(note)
+{console.log(chalk.inverse(note.title))
+console.log(chalk.inverse.yellow(note.body))}
+else
+{console.log(chalk.inverse.red('Note not found !'))}
+}
 const saveNotes=function(notes)
 {
     const dataJSON=JSON.stringify(notes)
@@ -57,8 +79,8 @@ const loadNotes=function(){
     {return []}
 }
 module.exports={
-    getNotes:getNotes,
     addNote:addNote,
     removeNote:removeNote,
-    listNote:listNote
+    listNote:listNote,
+    readNote:readNote
 } //to export multiple functions
