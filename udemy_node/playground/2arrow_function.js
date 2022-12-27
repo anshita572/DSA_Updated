@@ -6,6 +6,8 @@ return x*x}
 // const square=(x)=> x*x  //for single statement
 console.log(square(4))
 
+// 2 arrow function cannot be used with methods
+
 //ES6
 const myEvent={
     eventName:'Birthday party',

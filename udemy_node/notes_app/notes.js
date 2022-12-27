@@ -34,6 +34,14 @@ if(notes.length>notesToKeep.length)
 console.log(chalk.green.inverse("Note removed !"))}
 else
 {console.log(chalk.red.inverse("No note found !"))}}
+const listNote=()=>{
+    const notes=loadNotes()
+    console.log(chalk.inverse('Your notes'))
+    notes.forEach((i)=>{
+        console.log(chalk.inverse.magenta(i.title))
+    })
+}
+
 const saveNotes=function(notes)
 {
     const dataJSON=JSON.stringify(notes)
@@ -51,5 +59,6 @@ const loadNotes=function(){
 module.exports={
     getNotes:getNotes,
     addNote:addNote,
-    removeNote:removeNote
+    removeNote:removeNote,
+    listNote:listNote
 } //to export multiple functions
