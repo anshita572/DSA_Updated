@@ -1,5 +1,5 @@
-//https://leetcode.com/problems/edit-distance/description/
-#include<iostream>
+// https://leetcode.com/problems/edit-distance/description/
+#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 class Solution
@@ -7,7 +7,7 @@ class Solution
 public:
     int solveTab(string s1, string s2)
     {
-        vector<vector<int>> dp(s1.length()+1, vector<int>(s2.length()+1, 0));
+        vector<vector<int>> dp(s1.length() + 1, vector<int>(s2.length() + 1, 0));
         // converting base cases
         for (int j = 0; j < s2.length(); j++) // s1 has finished (s2>s1)
         {
@@ -34,9 +34,8 @@ public:
                     dp[i][j] = ans;
                 }
             }
-          
         }
-          return dp[0][0];
+        return dp[0][0];
     }
     int solve(string s1, string s2, int i, int j, vector<vector<int>> &dp)
     {
@@ -71,6 +70,6 @@ public:
         // vector<vector<int>> dp(word1.length(), vector<int>(word2.length(), -1));
         // int ans = solve(word1, word2, 0, 0, dp);
         // return ans;
-        return solveTab(word1,word2);
+        return solveTab(word1, word2);
     }
 };
