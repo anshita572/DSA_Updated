@@ -1,6 +1,6 @@
 function countdown()
 {
-const countDownDate=new Date("Jan 1,2023").getTime();
+const countDownDate=new Date("Jan 1,2024").getTime();
 // console.log(countDownDate);
 const currentDate=new Date().getTime();
 const gap=countDownDate-currentDate; //This difference will be in milliseconds
