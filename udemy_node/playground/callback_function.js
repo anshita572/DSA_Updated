@@ -8,23 +8,23 @@ const shortNames = names.filter(() => {
 });
 // The geocode function is set up to take in two parameters. The first is the address to geocode.
 // The second is the callback function to run when the geocoding process is complete
-// const geocode = (address, callback) => {
-//   setTimeout(() => {
-//     const data = {
-//       latitude: 0,
-//       longitude: 0,
-//     };
-//     callback(data);
-//   }, 2000);
-// };
-// geocode("London", (myData) => {
-//   console.log(myData);
-// });
-const add=(x,y,sum)=>{
-    setTimeout(()=>{
-        sum(x+y)
-    },2000)
-}
-add(1,4,(sum)=>{
-    console.log(sum)
-})
+const geocode = (address, callback) => {
+  setTimeout(() => {
+    const data = {
+      latitude: 0,
+      longitude: 0,
+    };
+    callback(data);
+  }, 2000);
+};
+geocode("London", (myData) => {
+  console.log(myData);
+});
+// const add=(x,y,sum)=>{
+//     setTimeout(()=>{
+//         sum(x+y)
+//     },2000)
+// }
+// add(1,4,(sum)=>{
+//     console.log(sum)
+// })
