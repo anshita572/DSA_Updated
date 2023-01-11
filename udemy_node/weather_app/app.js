@@ -23,3 +23,4 @@ request({ url: url,json:true }, (error, response) => {
   else
   {console.log("Latitude = "+response.body.data[0].latitude+" and Longitude = "+response.body.data[0].longitude)}
  })
+ 
