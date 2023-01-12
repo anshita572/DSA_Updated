@@ -5,6 +5,8 @@ const url =
 //  const data = JSON.parse(response.body)
 //  console.log(data.current) 
 // });
+
+//Weather stack
 request({ url: url,json:true }, (error, response) => {
   if(error) //network error(internet not working)
   {console.log('Unable to connect to weather service !')}
@@ -14,7 +16,8 @@ request({ url: url,json:true }, (error, response) => {
   {console.log (response.body.current.weather_descriptions[0]+".It is currently "+response.body.current.temperature+" degrees out.It feels like "+response.body.current.feelslike +" degrees out")
 }
  });
- const url2="http://api.positionstack.com/v1/forward?access_key=a544a5edf0bb14d2bff03d0151c8775e&query=1600%20Pennsylvania%20Ave%20NW,%20Washington%20DC"
+ //Position stack
+ const url2="http://api.positionstack.com/v1/forward?access_key=a544a5edf0bb14d2bff03d0151c8775e&query=Pennsylvania Ave NW, Washington DC"
  request({url:url2,json:true},(error,response)=>{
   if(error)
   {console.log('Unable to connect')}
