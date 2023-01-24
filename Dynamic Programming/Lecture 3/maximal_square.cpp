@@ -29,7 +29,7 @@ public:
                     curr[j] = 0;
                 }
             }
-            next = curr;
+            next = curr; // we r doing -- in loop
         }
         return next[0];
     }
