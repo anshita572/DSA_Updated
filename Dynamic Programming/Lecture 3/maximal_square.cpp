@@ -5,6 +5,34 @@ using namespace std;
 class Solution
 {
 public:
+    int solveSO(vector<vector<char>> &matrix, int &maxi)
+    {
+        int row = matrix.size();
+        int col = matrix[0].size();
+        vector<int> curr(col + 1, 0);
+        vector<int> next(col + 1, 0);
+        for (int i = row - 1; i >= 0; i--)
+        {
+            for (int j = col - 1; j >= 0; j--)
+            {
+                int down = next[j];
+                int diag = next[j + 1];
+                int right = curr[j + 1];
+                if (matrix[i][j] == '1')
+                {
+                    int side = 1 + min(down, min(diag, right));
+                    maxi = max(maxi, side);
+                    curr[j] = side;
+                }
+                else
+                {
+                    curr[j] = 0;
+                }
+            }
+            next = curr;
+        }
+        return next[0];
+    }
     int solveTab(vector<vector<char>> &matrix, int &maxi)
     {
         int row = matrix.size();    // total no of rows
