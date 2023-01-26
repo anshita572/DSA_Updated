@@ -1,5 +1,6 @@
 const path=require('path')
 const express=require('express')
+const { title } = require('process')
 const app=express()
 
 app.set('view engine','hbs')  //to set handlebars after installing it for dynamic sites
@@ -17,6 +18,12 @@ app.get('',(req,res)=>{
         title : 'using hbs from app.js',
         myName: 'Akshu'
     }) //render is used for views handlebars
+})
+app.get('/about',(req,res)=>{
+    res.render('about',{
+        mytitle:'about dogs'
+    })
+    
 })
 const directoryPath=path.join(__dirname,'../public')
 app.use(express.static(directoryPath)) //for index.html in public folder
