@@ -1,6 +1,7 @@
 const path=require('path')
 const express=require('express')
-const { title } = require('process')
+const hbs=require('hbs')
+// const { title } = require('process')
 const app=express()
 
 app.set('view engine','hbs')  //to set handlebars after installing it for dynamic sites
@@ -13,7 +14,10 @@ app.set('view engine','hbs')  //to set handlebars after installing it for dynami
 // app.get('',(req,res)=>{
 //     res.send("<h1>hi</h1>")
 // })
-
+const viewPath=path.join(__dirname,'../templates/views')
+app.set('views',viewPath)
+const partialPath=path.join(__dirname,'../templates/partials')
+hbs.registerPartials(partialPath)
 //setup static directory to serve
 
 app.get('',(req,res)=>{
