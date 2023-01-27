@@ -13,6 +13,9 @@ app.set('view engine','hbs')  //to set handlebars after installing it for dynami
 // app.get('',(req,res)=>{
 //     res.send("<h1>hi</h1>")
 // })
+
+//setup static directory to serve
+
 app.get('',(req,res)=>{
     res.render('index',{
         title : 'using hbs from app.js',
@@ -25,6 +28,7 @@ app.get('/about',(req,res)=>{
     })
     
 })
+//Define paths for express config
 const directoryPath=path.join(__dirname,'../public')
 app.use(express.static(directoryPath)) //for index.html in public folder
 // app.get('/about',(req,res)=>{
