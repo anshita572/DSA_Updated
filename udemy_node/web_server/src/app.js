@@ -46,24 +46,26 @@ app.use(express.static(directoryPath)) //for index.html in public folder
 //     age:20
 // }])
 // })
-app.get('/about/*',(req,res)=>{
-    res.send('About article not found !')
-})
+
+// app.get('/about/*',(req,res)=>{
+//     res.send('About article not found !')
+// })
+
 // app.get('*',(req,res)=>{
 //     res.send('Oops ! Error 404')
 // })
-app.get('/about',(req,res)=>{
-    res.render('about',{
-        mytitle:'about dogs',
-        myName: 'Anshita'
+app.get('/about/*',(req,res)=>{
+    res.render('404',{
+        mytitle:'404',
+        myName:'Anshita',
+        errorMessage:'About article not found'
     })
-    
 })
 app.get('*',(req,res)=>{
     res.render('404',{
         mytitle:'404',
         myName:'Anshita',
-        errorMessage:'Page not found'
+        errorMessage:'Oops ! Page not found'
     })
 })
 app.listen(3000,()=>{
