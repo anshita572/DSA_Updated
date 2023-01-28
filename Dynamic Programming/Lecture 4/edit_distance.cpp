@@ -5,6 +5,38 @@ using namespace std;
 class Solution
 {
 public:
+    int solveSO(string &s1, string &s2)
+    {
+        vector<int> curr(s2.size() + 1, 0);
+        vector<int> next(s2.size() + 1, 0);
+        for (int j = 0; j < s2.size(); j++)
+        {
+            curr[j] = s2.size() - j;
+        }
+        for (int i = 0; i < s1.size(); i++)
+        {
+            curr[s2.size()] = s1.size() - i;
+        }
+        for (int i = s1.size() - 1; i >= 0; i--)
+        {
+            for (int j = s2.size() - 1; j >= 0; j--)
+            {
+                if (s1[i] == s2[j])
+                {
+                    curr[j] = next[j + 1];
+                }
+                else
+                {
+                    int insert = curr[j + 1];
+                    int remove = next[j];
+                    int replace = next[j + 1];
+                    curr[j] = 1 + min(insert, min(remove, replace));
+                }
+            }
+            next = curr;
+        }
+        return curr[0];
+    }
     int solveTab(string s1, string s2)
     {
         vector<vector<int>> dp(s1.length() + 1, vector<int>(s2.length() + 1, 0));
@@ -70,6 +102,7 @@ public:
         // vector<vector<int>> dp(word1.length(), vector<int>(word2.length(), -1));
         // int ans = solve(word1, word2, 0, 0, dp);
         // return ans;
-        return solveTab(word1, word2);
+        // return solveTab(word1, word2);
+        return solveSO(word1, word2);
     }
 };
