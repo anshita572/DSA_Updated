@@ -1,9 +1,42 @@
-h1{
-    color: blue;
+body{
+    color:#333333;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 40.625rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 }
-img{
+.content{
+    flex-grow: 1;
+}
+header{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+footer{
+    color: #888888;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid #eeeeee;
+}
+h1{
+
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+header a{ 
+    /* header m jo anchor tags h */
+    color: #888888;
+    text-decoration: none;
+    margin-right: 1rem;
+
+}
+.dogImg{
     width: 250px;
 }
-p{
+/* p{
     color: crimson;
-}
+} */
