@@ -26,6 +26,17 @@ app.get('',(req,res)=>{
         myName: 'Akshu'
     }) //render is used for views handlebars
 })
+app.get('/weather',(req,res)=>{
+    if(!req.query.address)
+    {return res.send({
+        error:'You must provide an address'
+    })}
+    res.send({
+        forecast:'It is sunny',
+        location:'California',
+        address:req.query.address
+    })
+})
 app.get('/about',(req,res)=>{
     res.render('about',{
         mytitle:'about dogs',
