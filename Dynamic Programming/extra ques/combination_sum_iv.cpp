@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/combination-sum-iv/description/
 
 // TC : O(nums.size*target)
-// SC : O(1)
+// SC : O(target)
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
