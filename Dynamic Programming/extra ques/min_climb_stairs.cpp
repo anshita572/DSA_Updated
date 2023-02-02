@@ -1,4 +1,7 @@
 //https://leetcode.com/problems/min-cost-climbing-stairs/description/
+
+//  By the top position, the question means the positions after the last element of the array. It does not mean the position of the last element of the array
+
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
