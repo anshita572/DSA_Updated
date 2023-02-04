@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/minimum-cost-for-tickets/description/
+
+//We have 3 choices and we find the minimum out of them.The twist is whenever we take a 7-days or 30-days pass , we need to skip those days ,so use a FOR loop for that
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
