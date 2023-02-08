@@ -1,5 +1,9 @@
 // Variant of LIS
 // https://leetcode.com/problems/russian-doll-envelopes/description/
+
+// Refer this article for explanation
+// https://leetcode.com/problems/russian-doll-envelopes/solutions/2071477/c-java-python-best-explanation-with-pictures/?orderBy=most_votes
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -10,11 +14,11 @@ public:
     {
         if (a[0] == b[0])
         {
-            return a[1] > b[1];
+            return a[1] > b[1]; // if widths equal sort according to decreasing order of heights
         }
         else
         {
-            return a[0] < b[0];
+            return a[0] < b[0]; // else sort according to increasing order of heights
         }
     }
     int solveBS(vector<vector<int>> &nums)
