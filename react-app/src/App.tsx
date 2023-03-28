@@ -1,6 +1,7 @@
 // import Message from './Message';
 import ListGroup from "./components/ListGroup";
 function App(){
-  return <div><ListGroup/></div>;
+  let items=["Patiala","Ludhiana","Delhi","Mumbai"]
+  return <div><ListGroup items={items} heading={"Cities"}/></div>;
 }
 export default App;
