@@ -7,7 +7,7 @@ function App(){
   //hook
 
   const[alertVisible,setAlertVisibility]=useState(false);
-  
+
   // let items=["Patiala","Ludhiana","Delhi","Mumbai"]
   // const handleSelectItem=(item:string)=>{
   //   console.log(item);
@@ -21,7 +21,8 @@ function App(){
     return(
       <div>
         {alertVisible && <Alert onClose={()=>setAlertVisibility
-        (false)}>My alert</Alert>}
+        (false)}>My alert</Alert>} 
+        {/* jab alert visible ho and uspe click krre toh onclose se setAlertVisibility ko false krdo and alert ko close krdo */}
         <Button onClick={()=>setAlertVisibility(true)}>My button</Button>
       </div>
     )
