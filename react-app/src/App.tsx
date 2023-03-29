@@ -5,7 +5,9 @@ import { Button } from "./components/Button";
 import ListGroup from "./components/ListGroup";
 function App(){
   //hook
+
   const[alertVisible,setAlertVisibility]=useState(false);
+  
   // let items=["Patiala","Ludhiana","Delhi","Mumbai"]
   // const handleSelectItem=(item:string)=>{
   //   console.log(item);
