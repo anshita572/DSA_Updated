@@ -4,8 +4,9 @@ import { Fragment, useState } from "react";
 interface Props{
   items:string[];
   heading:string;
+  onSelectItem:(item:string)=>void; //like onClick event
 }
-function ListGroup({items,heading}:Props){
+function ListGroup({items,heading,onSelectItem}:Props){
   
   // let selectedIndex=0;
   //Hook
@@ -31,7 +32,8 @@ const[selectedIndex,setSelectedIndex]=useState(-1);
        key={i}
       //  onClick={()=>console.log(i,index)}
       // onClick={handleClick}
-      onClick={()=>{setSelectedIndex(index);}}
+      onClick={()=>{setSelectedIndex(index);
+      onSelectItem(i);}}
        >
       
         {i}</li>
