@@ -1,8 +1,11 @@
 import React from 'react'
+import Sidebar from '../Sidebar'
 import './index.scss'
 const Layout = () => {
   return (
-    <div>Layout</div>
+   <>
+   <Sidebar/>
+   </>
   )
 }
 export default Layout;
