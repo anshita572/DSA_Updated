@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 class graph
-{
+{m
 public:
     unordered_map<int, list<int>> adj;
     void addEdge(int u, int v, bool direction)
