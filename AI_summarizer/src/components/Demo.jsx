@@ -58,7 +58,7 @@ const Demo = () => {
           />
           <input
           type="url"
-          placeholder='Enter a URL'
+          placeholder='Paste the article link'
           value={article.url}
           onChange={(e)=>setArticle({...article,url:e.target.value})}
           required
