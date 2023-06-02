@@ -1,3 +1,4 @@
+//TC :O(h) h is height of tree and worst case TC : O(n) n is no of nodes in tree
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
