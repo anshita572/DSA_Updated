@@ -4,7 +4,7 @@ pair<int,int> predecessorSuccessor(BinaryTreeNode<int>* root, int key)
    int pre=-1;
    int succ=-1;
    BinaryTreeNode<int>*temp=root;
-   while(temp->data != key)
+   while(temp->data != key) //find the key
    {
        if(key < temp->data)
        {
