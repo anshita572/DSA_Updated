@@ -1,5 +1,5 @@
-//TC : O(1)
-//SC : O(1)
+// TC : O(1)
+// SC : O(1)
 #include <iostream>
 using namespace std;
 class stack
@@ -17,9 +17,9 @@ public:
         top = -1;
     }
     void push(int
-     element)
+                  element)
     {
-        if (size-top>1)
+        if (size - top > 1)
         {
             top++; // pehle -1 se 0 index pe leke aaoo top ko and then push the element at 0th index
             arr[top] = element;
@@ -64,11 +64,16 @@ public:
         }
     }
     int currentSize()
-    {  if(top>=0)
-        {cout<<"Current size of stack : "<<top+1<<endl;}
+    {
+        if (top >= 0)
+        {
+            cout << "Current size of stack : " << top + 1 << endl;
+        }
         else
-        {cout<<"Stack is empty"<<endl;
-        return -1;} 
+        {
+            cout << "Stack is empty" << endl;
+            return -1;
+        }
     }
 };
 int main()
