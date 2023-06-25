@@ -1,4 +1,7 @@
 //https://bit.ly/3ovTIu2
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 void solve(stack<int>&inputStack,int count,int size)
 {
 	//base case
