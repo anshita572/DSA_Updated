@@ -1,5 +1,8 @@
 //https://bit.ly/3snpr1B
 //TC : O(n^2)
+#include<iostream>
+#include <bits/stdc++.h>
+using namespace std;
 void insertSorted(stack<int> &stack,int element)
 {
 	//base case
