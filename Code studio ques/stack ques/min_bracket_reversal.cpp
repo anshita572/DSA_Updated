@@ -1,5 +1,8 @@
 //Minimum bracket Reversal
 //https://bit.ly/3GAYRr5
+
+// similar ques : https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/
+
 // M1: TC : O(n) SC:O(n)
 #include<iostream>
 using namespace std;
