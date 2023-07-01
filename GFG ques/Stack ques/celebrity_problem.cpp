@@ -20,7 +20,7 @@ class Solution
         {bool isCelebrity = true;
          for(int j=0;j<n;j++)
          {if(i!=j && (knows(M,i,j) || !knows(M,j,i)))
-            {isCelebrity = false;
+            {isCelebrity = false; // i is not a celebrity
              break;    
             }
              
