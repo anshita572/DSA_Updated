@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/studio/problems/n-stacks-in-an-array_1164271?leftPanelTab=0
+// https://takeuforward.org/data-structure/implement-k-stacks-in-a-single-array/
 // TC:O(1) SC:O(n)
 #include<iostream>
 #include <bits/stdc++.h>
