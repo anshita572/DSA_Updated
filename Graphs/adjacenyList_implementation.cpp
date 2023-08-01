@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 class graph
-{m
+{
 public:
     unordered_map<int, list<int>> adj;
     void addEdge(int u, int v, bool direction)
@@ -37,6 +37,7 @@ int main()
     cout << "Enter the number of edges" << endl;
     cin >> m;
     graph g;
+    cout<<"Enter the edges"<<endl;
     for (int i = 0; i < m; i++)
     {
         int u, v;
@@ -46,3 +47,4 @@ int main()
     g.printAdjList();
     return 0;
 }
+
