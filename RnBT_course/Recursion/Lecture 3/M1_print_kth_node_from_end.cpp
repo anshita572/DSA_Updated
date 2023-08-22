@@ -28,12 +28,13 @@ void insertAtTail(node *&tail, int d)
     // tail=tail->next;
 }
 //Print LL recursively
-void printNode(node *&head)
+void printNode(node *&head,int i,int target)
 {
-   if(head==NULL)
-   {return;}
-   cout<<head->data<<" ";
-   printNode(head->next);
+   if(head==NULL || i == target)
+   {cout<<head->data<<" ";
+    return;}
+   
+   printNode(head->next,i+1,target);
 
 }
 void kthNode(node* &head,int &k)
@@ -42,13 +43,15 @@ int len=0;
 while(temp!=NULL)
 {temp=temp->next;
 len++;}
-temp=head;
-for (int i = 0; i < len-k; i++)
-{
-    temp=temp->next;
-}
-cout<< temp->data;
-
+// Iterative
+// temp=head;
+// for (int i = 0; i < len-k; i++)
+// {
+//     temp=temp->next;
+// }
+// cout<< temp->data;
+// Recursive
+printNode(head,0,len-k);
 
 }
 
@@ -63,7 +66,7 @@ int main()
     insertAtTail(tail, 3);
     insertAtTail(tail, 4);
     insertAtTail(tail, 5);
-    printNode(head);
+    // printNode(head);
     cout<<endl;
     int k=2;
   kthNode(head,k);

@@ -1,5 +1,6 @@
 //https://leetcode.com/problems/add-strings/
 //TC :O(n+m)   SC : O(n+m)   (n+m=length of num1,num2)
+// When you subtract '0' from a character that represents a digit (0 to 9), you get the actual integer value that the character represents.This is necessary because characters are represented by their ASCII values, and subtracting '0' adjusts them to their actual integer values.
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
