@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/sum-of-all-subset-xor-totals/
+// M1 : backtracking
 // TC : O(2^n) SC:O(n)
 #include <iostream>
 #include <bits/stdc++.h>
@@ -25,6 +26,27 @@ public:
     }
 };
 
+// M2 : recursion
+// TC : O(2^n) SC:O(n)
+class Solution {
+public:
+    int solve(vector<int>& nums, int xorVal, int i){
+        if(i == nums.size()){
+            return xorVal;
+        }
+        
+        int inc = solve(nums, xorVal ^ nums[i], i+1);
+        int exc = solve(nums, xorVal, i+1);
+        return inc + exc;
+    }
+    int subsetXORSum(vector<int>& nums) {
+        int xorVal = 0;
+        int i = 0;
+        return solve(nums, xorVal, i);
+    }
+};
+
+// M3 : Bit manipulation (couldn't understand)
 
 
 

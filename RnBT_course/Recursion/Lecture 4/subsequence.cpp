@@ -16,6 +16,7 @@ void subseq(string s, string ans, int i)
 int main()
 {
     string s = "abc";
+    // string s = "abb"; // this code does not handle duplicates
     string ans = "";
     subseq(s, ans, 0);
     return 0;

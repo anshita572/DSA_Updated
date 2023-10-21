@@ -1,4 +1,6 @@
 //https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1
+
+// TC : O(n!*n*)  SC: O(n!*n)
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;

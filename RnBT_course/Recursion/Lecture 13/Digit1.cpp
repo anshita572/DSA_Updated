@@ -1,4 +1,24 @@
 //https://leetcode.com/problems/number-of-digit-one/
+// Brute force
+// TC : O(nlog10(n)) , SC : O(1)
+class Solution {
+public:
+    int countDigitOne(int n) {
+        int count = 0;
+        for(int i = 0; i <= n; i++){
+            int num = i;
+            while(num > 0){
+            if(num % 10 == 1){
+                count++;
+            }
+            num = num / 10;
+         }
+        }
+        return count;
+    }
+};
+// optimised
+// TC : O(log10(n)) ~ O(log(n)) , SC : O(log10(n)) ~ O(log(n))  (log base 10)
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
